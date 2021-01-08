@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -25,6 +25,9 @@
                                     <segment title="" image="sun.min" catalog="system"/>
                                     <segment title="" image="moon" catalog="system"/>
                                 </segments>
+                                <connections>
+                                    <action selector="lightDarkSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="rnU-BT-7l2"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw7-Xl-gwe">
                                 <rect key="frame" x="20" y="184" width="374" height="100"/>
@@ -282,6 +285,7 @@
                     <connections>
                         <outlet property="answerLabel" destination="Sw7-Xl-gwe" id="p0w-C2-ukm"/>
                         <outlet property="buttonPushedLabel" destination="sQ0-pL-sma" id="oRx-KE-x8a"/>
+                        <outlet property="lightDarkMode" destination="go5-nb-FDX" id="9Ad-D5-xRR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

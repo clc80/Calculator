@@ -16,8 +16,17 @@ class CalculatorViewController: UIViewController {
     
     @IBOutlet var answerLabel: UILabel!
     @IBOutlet var buttonPushedLabel: UILabel!
+    @IBOutlet var lightDarkMode: UISegmentedControl!
     
     //MARK: - Actions
+    
+    @IBAction func lightDarkSegment(_ sender: Any) {
+        if lightDarkMode.selectedSegmentIndex == 0 {
+            overrideUserInterfaceStyle = .light
+        } else {
+            overrideUserInterfaceStyle = .dark
+        }
+    }
     @IBAction func clearButtonPressed(_ sender: Any) {
         currentNumber = 0
         previousNumber = 0
